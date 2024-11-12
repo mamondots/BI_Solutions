@@ -1,0 +1,43 @@
+.proven .slick-slide {
+  margin: 0 10px; /* Adjust the gap as needed */
+}
+.proven .arrow {
+  font-size: 20px;
+  padding: 8px 8px;
+  color: #3861e8;
+  position: absolute;
+  display: flex;
+  margin-top: 80px;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  transition: 0.5s;
+  cursor: pointer;
+}
+/* .proven .arrow:hover {
+  background-color: #ffcb57;
+  color: #262626;
+} */
+.proven .arrow-prev {
+  padding: 6px;
+  border-radius: 2px;
+  position: absolute;
+  background-color: #ffffff;
+  margin-right: 60px;
+  display: inline-flex;
+}
+.proven .arrow-prev:hover {
+  background-color: #3861e8;
+  color: #fff;
+}
+.proven .arrow-next {
+  padding: 6px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  margin-left: 100px;
+}
+.proven .arrow-next:hover {
+  background-color: #3861e8;
+  color: #fff;
+}
