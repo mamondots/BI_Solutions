@@ -107,9 +107,11 @@ const Blog = () => {
         </div>
 
         <div className="">
-          <button className="lg:text-lg md:text-lg text-sm mt-8 font-medium px-8 py-2 bg-[#3D6BFF] hover:bg-[#0537E0] duration-300 cursor-pointer text-[#fff] rounded-lg shadow border-b-2 border-[#90AAFF]">
-            Get Started with BI
-          </button>
+          <Link to="/">
+            <button className="lg:text-lg md:text-lg text-sm mt-8 font-medium px-8 py-2 bg-[#3D6BFF] hover:bg-[#0537E0] duration-300 cursor-pointer text-[#fff] rounded-lg shadow border-b-2 border-[#90AAFF]">
+              Get Started with BI
+            </button>
+          </Link>
         </div>
       </div>
     </div>

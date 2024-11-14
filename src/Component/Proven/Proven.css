@@ -12,10 +12,7 @@
   transition: 0.5s;
   cursor: pointer;
 }
-/* .proven .arrow:hover {
-  background-color: #ffcb57;
-  color: #262626;
-} */
+
 .proven .arrow-prev {
   padding: 6px;
   border-radius: 2px;
@@ -39,10 +36,12 @@
   color: #fff;
 }
 
-.slick-slide {
-  transition: transform 0.3s ease;
+.proven .slick-slide {
+  transition: transform 0.5s ease;
+  margin-left: -17px;
 }
 
-.slick-center .slick-slide {
-  transform: scale(1.1); /* Slightly enlarge the centered slide */
+.proven .slick-current {
+  margin-top: -30px;
+  width: 650px !important;
 }

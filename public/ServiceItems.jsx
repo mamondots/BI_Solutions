@@ -20,7 +20,6 @@ export const Items = [
     ],
   },
   {
-    subTitle: "Our services",
     title: "End-to-End Data ETL & Data Warehouse Implementation",
     description:
       "Transform your data pipeline with our comprehensive ETL (Extract, Transform, Load) services and secure data warehousing solutions. We ensure data flows smoothly, accurately, and securely, ready to support your business’s analytical needs",
@@ -35,7 +34,6 @@ export const Items = [
     ],
   },
   {
-    subTitle: "Our services",
     title: "Dashboard & Report Development",
     description:
       "Bring your data to life with custom dashboards and reports that allow you to monitor, analyze, and make informed decisions in real time. Our designs are intuitive, insightful, and tailored to align with your business goals",
@@ -53,7 +51,6 @@ export const Items = [
     ],
   },
   {
-    subTitle: "Our services",
     title: "Migration from On-Premises to Cloud",
     description:
       "Move your data infrastructure to the cloud seamlessly and securely. Our cloud migration services ensure minimized downtime, increased flexibility, and reduced infrastructure costs",
@@ -74,7 +71,6 @@ export const Items = [
     ],
   },
   {
-    subTitle: "Our services",
     title: "Consulting & Support",
     description:
       "From strategic advice to hands-on technical support, our team is here to ensure your data solutions are always running smoothly and delivering maximum value",

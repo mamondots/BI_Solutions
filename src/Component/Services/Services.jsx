@@ -1,9 +1,9 @@
 import { Items } from "../../../public/ServiceItems";
-import ServicesSlide from "../../Utilits/ServicesSlide";
+import ServicesSlide from "../../Utilits/ServicesSlide/ServicesSlide";
 
 const Services = () => {
   return (
-    <div className="lg:px-32 md:px-20 px-6 py-12 lg:mt-40">
+    <div className="lg:px-32 md:px-20 px-6 py-12 lg:mt-40 relative">
       <div className="lg:flex hidden flex-col justify-center items-center gap-4">
         {Items.map((item, itemIndex) => (
           <div

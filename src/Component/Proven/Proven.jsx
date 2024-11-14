@@ -8,8 +8,7 @@ import icon from "../../assets/images/longIcon.png";
 import { IoIosArrowForward } from "react-icons/io";
 
 import { IoIosArrowBack } from "react-icons/io";
-import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import Computer from "../../Utilits/ProvenComputer/Computer";
 
 function SampleNextArrow(props) {
   const { onClick } = props;
@@ -30,21 +29,9 @@ function SamplePrevArrow(props) {
 }
 
 const Proven = () => {
-  const [upBox, setUpBox] = useState(false);
-  const location = useLocation();
-
-  useEffect(() => {
-    setUpBox(location.pathname !== "/");
-    window.addEventListener("scroll", () => {
-      if (window.scrollX >= 80 || location.pathname !== "/") setUpBox(true);
-      else setUpBox(false);
-    });
-  }, [location.pathname]);
-
   var settings = {
     dots: false,
-    setUpBox: true,
-    gap: 2,
+    centerMode: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     infinite: true,
@@ -92,14 +79,14 @@ const Proven = () => {
         </p>
       </div>
 
-      <div className="text-[#fff] mx-4  proven">
+      <div className="text-[#fff] mx-4">
         <div className="flex flex-col items-center justify-center">
           <img className="mt-4" src={icon} alt="icon" />
         </div>
-        <div className="">
-          <Slider {...settings} className="">
-            <div className={` ${upBox ? "" : "px-4"}`}>
-              <div className="border  border-dashed border-[#A6BBFF] rounded-md px-6 py-8 text-center bg-[#091025]">
+        <div className="hidden lg:block proven">
+          <Slider {...settings} className="lg:h-[50vh]">
+            <div className="px-4 lg:mt-10">
+              <div className="border  border-dashed border-[#A6BBFF] h-[220px] rounded-md px-6 py-8 text-center bg-[#091025]">
                 <p className="lg:text-base text-sm">
                   “Thanks to you, we transformed our data infrastructure
                   seamlessly. Their expertise in BI and data engineering enabled
@@ -112,8 +99,8 @@ const Proven = () => {
               </div>
             </div>
 
-            <div className="px-4">
-              <div className="border  border-dashed border-[#A6BBFF] rounded-md px-6 py-8 text-center bg-[#091025]">
+            <div className="px-4 lg:mt-10">
+              <div className="border  border-dashed border-[#A6BBFF] h-[220px] rounded-md px-6 py-8 text-center bg-[#091025]">
                 <p className="lg:text-base text-sm">
                   “Thanks to you, we transformed our data infrastructure
                   seamlessly. Their expertise in BI and data engineering enabled
@@ -126,8 +113,8 @@ const Proven = () => {
               </div>
             </div>
 
-            <div className="px-4">
-              <div className="border  border-dashed border-[#A6BBFF] rounded-md px-6 py-8 text-center bg-[#091025]">
+            <div className="px-4 lg:mt-10">
+              <div className="border  border-dashed border-[#A6BBFF] h-[220px] rounded-md px-6 py-8 text-center bg-[#091025]">
                 <p className="lg:text-base text-sm">
                   “Thanks to you, we transformed our data infrastructure
                   seamlessly. Their expertise in BI and data engineering enabled
@@ -140,8 +127,8 @@ const Proven = () => {
               </div>
             </div>
 
-            <div className="px-4">
-              <div className="border  border-dashed border-[#A6BBFF] rounded-md px-6 py-8 text-center bg-[#091025]">
+            <div className="px-4 lg:mt-10">
+              <div className="border  border-dashed border-[#A6BBFF] h-[220px] rounded-md px-6 py-8 text-center bg-[#091025]">
                 <p className="lg:text-base text-sm">
                   “Thanks to you, we transformed our data infrastructure
                   seamlessly. Their expertise in BI and data engineering enabled
@@ -154,6 +141,9 @@ const Proven = () => {
               </div>
             </div>
           </Slider>
+        </div>
+        <div className="lg:hidden">
+          <Computer></Computer>
         </div>
       </div>
     </div>

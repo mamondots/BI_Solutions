@@ -1,0 +1,18 @@
+.patnar .slick-dots {
+  bottom: -80px !important;
+}
+.slick-dots li button::before {
+  display: none;
+}
+.patnar .slick-dots li {
+  display: inline-block;
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50%;
+  background-color: #708ff5c9;
+}
+.patnar .slick-dots li.slick-active {
+  background-color: #3a69ff;
+  /* width: 15px !important;
+    height: 15px !important; */
+}

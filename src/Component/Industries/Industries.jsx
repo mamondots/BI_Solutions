@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { IoIosArrowForward } from "react-icons/io";
 import { IoRemoveOutline } from "react-icons/io5";
 import "./Industries.css";
@@ -8,9 +9,31 @@ import Slider from "react-slick";
 import finiacila from "../../assets/images/wallet-check.png";
 import health from "../../assets/images/health.png";
 import management from "../../assets/images/favorite-chart.png";
+
+import { IoIosArrowBack } from "react-icons/io";
+
+function SampleNextArrow(props) {
+  const { onClick } = props;
+  return (
+    <div className="arrow arrow-next lg:mr-0 mr-[-40px]" onClick={onClick}>
+      <IoIosArrowForward />
+    </div>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { onClick } = props;
+  return (
+    <div className="arrow arrow-prev lg:mr-0 mr-[-40px]" onClick={onClick}>
+      <IoIosArrowBack />
+    </div>
+  );
+}
 const Industries = () => {
   var settings = {
-    dots: true,
+    dots: false,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -43,7 +66,7 @@ const Industries = () => {
     ],
   };
   return (
-    <div className="lg:px-24 md:px-20 px-6 lg:py-12 mt-12">
+    <div className="lg:px-24 md:px-20 px-6 lg:py-12 lg:mt-12 mt-28 industries">
       <div className="flex items-center justify-center flex-col text-center">
         <h2 className="lg:text-4xl text-2xl font-semibold text-[#262626]">
           Industries We Serve

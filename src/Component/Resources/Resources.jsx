@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import ResourcesCards from "../../Utilits/ResourcesCards";
+import ResourcesCards from "../../Utilits/ResourcesCards/ResourcesCards";
 import WithBI from "../../Utilits/withBI";
 
 const Resources = () => {
@@ -29,12 +28,9 @@ const Resources = () => {
               Sept 02, 2024
             </p>
             <div className="lg:w-[580px] mt-4">
-              <Link
-                to="/blog"
-                className=" lg:text-3xl text-lg font-semibold  lg:leading-10 hover:text-[#bdc7e7] cursor-pointer duration-300"
-              >
+              <h2 className=" lg:text-3xl text-lg font-semibold  lg:leading-10">
                 5 Ways to Optimize Your Data Pipeline for Better Insights
-              </Link>
+              </h2>
             </div>
           </div>
         </div>

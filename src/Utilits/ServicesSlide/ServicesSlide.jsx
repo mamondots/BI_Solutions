@@ -1,22 +1,41 @@
+/* eslint-disable react/prop-types */
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { Items } from "../../public/ServiceItems";
+import "./ServicesSlide.css";
+import { Items } from "../../../public/ServiceItems";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
+
+function SampleNextArrow(props) {
+  const { onClick } = props;
+  return (
+    <div className="arrow arrow-next lg:mr-0 mr-[-40px]" onClick={onClick}>
+      <IoIosArrowForward />
+    </div>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { onClick } = props;
+  return (
+    <div className="arrow arrow-prev lg:mr-0 mr-[-40px]" onClick={onClick}>
+      <IoIosArrowBack />
+    </div>
+  );
+}
 const ServicesSlide = () => {
   var settings = {
     dots: false,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
   return (
-    <div className="relative">
-      {/* <div className="top-[430px] absolute z-10 py-4">
-        <p className="lg:text-xl md:text-xl text-sm font-normal text-[#545454]">
-          Our services
-        </p>
-      </div> */}
+    <div className="relative serviceSlide">
       <Slider {...settings}>
         {Items.map((item) => (
           <div key={item.title} className="mx-1">

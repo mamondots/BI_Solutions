@@ -1,11 +1,11 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import "./Partners.css";
 import { Brands } from "../../../public/Brands";
 import Slider from "react-slick";
 const Partners = () => {
   var settings = {
-    dots: false,
+    dots: true,
     arrows: false,
     infinite: true,
     speed: 500,
@@ -39,7 +39,7 @@ const Partners = () => {
     ],
   };
   return (
-    <div className="lg:px-32 md:px-20 px-6 lg:py-12 lg:mt-12">
+    <div className="lg:px-32 md:px-20 px-6 lg:py-12 lg:mt-12 md:mt-12 mt-20 patnar">
       <div className="flex items-center justify-center flex-col text-center">
         <h2 className="lg:text-4xl text-2xl font-semibold text-[#262626]">
           Our Trusted Partners

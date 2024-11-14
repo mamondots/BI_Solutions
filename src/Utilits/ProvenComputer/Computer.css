@@ -1,7 +1,7 @@
-.industries .arrow {
+.provenComputer .arrow {
   font-size: 20px;
   padding: 8px 8px;
-  color: #fff;
+  color: #3861e8;
   position: absolute;
   display: flex;
   margin-top: 80px;
@@ -13,25 +13,25 @@
   cursor: pointer;
 }
 
-.industries .arrow-prev {
+.provenComputer .arrow-prev {
   padding: 6px;
   border-radius: 2px;
   position: absolute;
-  background-color: #3b69ff;
+  background-color: #ffffff;
   margin-left: -80px;
   display: inline-flex;
 }
-.industries .arrow-prev:hover {
-  background-color: #0538df;
+.provenComputer .arrow-prev:hover {
+  background-color: #3861e8;
   color: #fff;
 }
-.industries .arrow-next {
+.provenComputer .arrow-next {
   padding: 6px;
   border-radius: 2px;
-  background-color: #3b69ff;
+  background-color: #ffffff;
   margin-left: 60px;
 }
-.industries .arrow-next:hover {
-  background-color: #0538df;
+.provenComputer .arrow-next:hover {
+  background-color: #3861e8;
   color: #fff;
 }

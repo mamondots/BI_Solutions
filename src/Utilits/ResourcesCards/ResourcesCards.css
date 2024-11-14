@@ -1,4 +1,4 @@
-.industries .arrow {
+.resourcesCards .arrow {
   font-size: 20px;
   padding: 8px 8px;
   color: #fff;
@@ -13,7 +13,7 @@
   cursor: pointer;
 }
 
-.industries .arrow-prev {
+.resourcesCards .arrow-prev {
   padding: 6px;
   border-radius: 2px;
   position: absolute;
@@ -21,17 +21,17 @@
   margin-left: -80px;
   display: inline-flex;
 }
-.industries .arrow-prev:hover {
+.resourcesCards .arrow-prev:hover {
   background-color: #0538df;
   color: #fff;
 }
-.industries .arrow-next {
+.resourcesCards .arrow-next {
   padding: 6px;
   border-radius: 2px;
   background-color: #3b69ff;
   margin-left: 60px;
 }
-.industries .arrow-next:hover {
+.resourcesCards .arrow-next:hover {
   background-color: #0538df;
   color: #fff;
 }
