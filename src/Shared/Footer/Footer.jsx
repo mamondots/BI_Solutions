@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="lg:px-28 md:px-20 px-6 py-12 lg:mt-10 relative">
+    <div className="lg:px-28 md:px-20 px-6  py-12 lg:mt-10 relative">
       <div className="grid lg:grid-cols-2 gap-8">
         <div>
           <h2 className="text-[#4D4D4D] text-2xl font-semibold">Logo</h2>
@@ -62,10 +62,8 @@ const Footer = () => {
         <p className="text-sm text-[#8A8A8A]">© Copyright 2024</p>
       </div>
 
-      {/* <div className="flex items-center justify-center absolute bottom-0">
-        <h1 className="text-[#EAEAEA] text-[300px] font-bold ">
-          LOGO
-        </h1>
+      {/* <div className="flex items-center justify-center absolute bottom-0 left-0">
+        <h1 className="text-[#EAEAEA] text-[400px] font-bold ">LOGO</h1>
       </div> */}
     </div>
   );

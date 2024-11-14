@@ -1,6 +1,6 @@
 const WithBI = () => {
   return (
-    <div className=" bg-custom-image4 bg-cover rounded-xl py-20 text-white lg:px-20 px-6">
+    <div className=" bg-[url(https://i.ibb.co.com/b3dDVWm/BI.png)] bg-cover rounded-xl py-20 text-white lg:px-20 px-6">
       <div className="flex justify-center items-center flex-col text-center">
         <h2 className="lg:text-2xl text-lg leading-10">
           Unlock the full potential of your data with our customized BI and data

@@ -3,15 +3,18 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import "./Proven.css";
+
 import icon from "../../assets/images/longIcon.png";
 import { IoIosArrowForward } from "react-icons/io";
 
 import { IoIosArrowBack } from "react-icons/io";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 function SampleNextArrow(props) {
   const { onClick } = props;
   return (
-    <div className="arrow arrow-next" onClick={onClick}>
+    <div className="arrow arrow-next lg:mr-0 mr-[-40px]" onClick={onClick}>
       <IoIosArrowForward />
     </div>
   );
@@ -20,15 +23,28 @@ function SampleNextArrow(props) {
 function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
-    <div className="arrow arrow-prev" onClick={onClick}>
+    <div className="arrow arrow-prev lg:mr-0 mr-[-40px]" onClick={onClick}>
       <IoIosArrowBack />
     </div>
   );
 }
 
 const Proven = () => {
+  const [upBox, setUpBox] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setUpBox(location.pathname !== "/");
+    window.addEventListener("scroll", () => {
+      if (window.scrollX >= 80 || location.pathname !== "/") setUpBox(true);
+      else setUpBox(false);
+    });
+  }, [location.pathname]);
+
   var settings = {
     dots: false,
+    setUpBox: true,
+    gap: 2,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     infinite: true,
@@ -39,7 +55,7 @@ const Proven = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
           dots: false,
@@ -64,8 +80,8 @@ const Proven = () => {
   };
 
   return (
-    <div className="bg-[#00071F] py-20">
-      <div className="flex items-center justify-center flex-col text-center lg:px-28 md:px-20 px-6">
+    <div className="bg-[#00071F] py-40 lg:px-0 px-6">
+      <div className="flex items-center justify-center flex-col text-center lg:px-28 md:px-20 px-2">
         <h2 className="lg:text-4xl text-2xl font-semibold text-[#fff]">
           Proven Results
         </h2>
@@ -76,59 +92,69 @@ const Proven = () => {
         </p>
       </div>
 
-      <div className="text-[#fff]  proven">
+      <div className="text-[#fff] mx-4  proven">
         <div className="flex flex-col items-center justify-center">
           <img className="mt-4" src={icon} alt="icon" />
         </div>
-        <Slider {...settings} className="mt-8">
-          <div className="border border-dashed border-[#A6BBFF] rounded-md px-6 py-8 text-center bg-[#091025]">
-            <p className="text-base">
-              “Thanks to you, we transformed our data infrastructure seamlessly.
-              Their expertise in BI and data engineering enabled us to gain
-              clear, actionable insights, boosting our decision-making and
-              operational efficiency”
-            </p>
-            <p className="pt-4 text-sm text-[#8A8A8A]">
-              Jessica T., CFO, Global Asset Management
-            </p>
-          </div>
+        <div className="">
+          <Slider {...settings} className="">
+            <div className={` ${upBox ? "" : "px-4"}`}>
+              <div className="border  border-dashed border-[#A6BBFF] rounded-md px-6 py-8 text-center bg-[#091025]">
+                <p className="lg:text-base text-sm">
+                  “Thanks to you, we transformed our data infrastructure
+                  seamlessly. Their expertise in BI and data engineering enabled
+                  us to gain clear, actionable insights, boosting our
+                  decision-making and operational efficiency”
+                </p>
+                <p className="pt-4 text-sm text-[#8A8A8A]">
+                  Jessica T., CFO, Global Asset Management
+                </p>
+              </div>
+            </div>
 
-          <div className="border border-dashed border-[#A6BBFF] rounded-md px-6 py-8 text-center bg-[#091025]">
-            <p className="text-base">
-              “Thanks to you, we transformed our data infrastructure seamlessly.
-              Their expertise in BI and data engineering enabled us to gain
-              clear, actionable insights, boosting our decision-making and
-              operational efficiency”
-            </p>
-            <p className="pt-4 text-sm text-[#8A8A8A]">
-              Jessica T., CFO, Global Asset Management
-            </p>
-          </div>
+            <div className="px-4">
+              <div className="border  border-dashed border-[#A6BBFF] rounded-md px-6 py-8 text-center bg-[#091025]">
+                <p className="lg:text-base text-sm">
+                  “Thanks to you, we transformed our data infrastructure
+                  seamlessly. Their expertise in BI and data engineering enabled
+                  us to gain clear, actionable insights, boosting our
+                  decision-making and operational efficiency”
+                </p>
+                <p className="pt-4 text-sm text-[#8A8A8A]">
+                  Jessica T., CFO, Global Asset Management
+                </p>
+              </div>
+            </div>
 
-          <div className="border border-dashed border-[#A6BBFF] rounded-md px-6 py-8 text-center bg-[#091025]">
-            <p className="text-base">
-              “Thanks to you, we transformed our data infrastructure seamlessly.
-              Their expertise in BI and data engineering enabled us to gain
-              clear, actionable insights, boosting our decision-making and
-              operational efficiency”
-            </p>
-            <p className="pt-4 text-sm text-[#8A8A8A]">
-              Jessica T., CFO, Global Asset Management
-            </p>
-          </div>
+            <div className="px-4">
+              <div className="border  border-dashed border-[#A6BBFF] rounded-md px-6 py-8 text-center bg-[#091025]">
+                <p className="lg:text-base text-sm">
+                  “Thanks to you, we transformed our data infrastructure
+                  seamlessly. Their expertise in BI and data engineering enabled
+                  us to gain clear, actionable insights, boosting our
+                  decision-making and operational efficiency”
+                </p>
+                <p className="pt-4 text-sm text-[#8A8A8A]">
+                  Jessica T., CFO, Global Asset Management
+                </p>
+              </div>
+            </div>
 
-          <div className="border border-dashed border-[#A6BBFF] rounded-md px-6 py-8 text-center bg-[#091025]">
-            <p className="text-base">
-              “Thanks to you, we transformed our data infrastructure seamlessly.
-              Their expertise in BI and data engineering enabled us to gain
-              clear, actionable insights, boosting our decision-making and
-              operational efficiency”
-            </p>
-            <p className="pt-4 text-sm text-[#8A8A8A]">
-              Jessica T., CFO, Global Asset Management
-            </p>
-          </div>
-        </Slider>
+            <div className="px-4">
+              <div className="border  border-dashed border-[#A6BBFF] rounded-md px-6 py-8 text-center bg-[#091025]">
+                <p className="lg:text-base text-sm">
+                  “Thanks to you, we transformed our data infrastructure
+                  seamlessly. Their expertise in BI and data engineering enabled
+                  us to gain clear, actionable insights, boosting our
+                  decision-making and operational efficiency”
+                </p>
+                <p className="pt-4 text-sm text-[#8A8A8A]">
+                  Jessica T., CFO, Global Asset Management
+                </p>
+              </div>
+            </div>
+          </Slider>
+        </div>
       </div>
     </div>
   );

@@ -1,18 +1,19 @@
 import { Items } from "../../../public/ServiceItems";
+import ServicesSlide from "../../Utilits/ServicesSlide";
 
 const Services = () => {
   return (
     <div className="lg:px-32 md:px-20 px-6 py-12 lg:mt-40">
-      <div className="flex flex-col justify-center items-center gap-4">
+      <div className="lg:flex hidden flex-col justify-center items-center gap-4">
         {Items.map((item, itemIndex) => (
           <div
             key={item.title}
             className="flex lg:flex-row  flex-col items-center justify-center gap-2 sticky "
             style={{
-              top: `calc(124px + ${itemIndex * 0}px)`,
+              top: `calc(80px + ${itemIndex * 0}px)`,
             }}
           >
-            <div className="flex lg:gap-12 lg:w-4/5">
+            <div className="flex lg:gap-12 lg:w-3/5">
               <div className="flex flex-col  gap-2 mt-12 px-2 bg-[#fff] rounded-xl">
                 {item.arrows.map((arrow) => (
                   <img
@@ -23,10 +24,10 @@ const Services = () => {
                   />
                 ))}
               </div>
-              <img src={item.image} alt="" />
+              <img className="lg:w-[400px]" src={item.image} alt="" />
             </div>
 
-            <div className="lg:w-3/5 bg-[#fff] py-20">
+            <div className="lg:w-3/5 bg-[#fff] py-12">
               <p className="lg:text-xl md:text-xl text-sm font-normal text-[#545454]">
                 {item.subTitle}
               </p>
@@ -43,6 +44,10 @@ const Services = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="lg:hidden mt-8">
+        <ServicesSlide></ServicesSlide>
       </div>
     </div>
   );

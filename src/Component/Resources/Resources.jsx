@@ -23,7 +23,7 @@ const Resources = () => {
       </div>
 
       <div className="mt-12">
-        <div className="relative bg-custom-image3 rounded-2xl bg-center pb-32">
+        <div className="relative bg-[url(https://i.ibb.co.com/XWPqmyX/resourch.png)] rounded-2xl bg-center pb-32">
           <div className="text-[#fff] px-8 py-8">
             <p className="border border-[#414141] bg-[#19202E] px-4 py-2 rounded-full text-sm inline-flex">
               Sept 02, 2024
