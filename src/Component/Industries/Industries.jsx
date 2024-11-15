@@ -66,7 +66,10 @@ const Industries = () => {
     ],
   };
   return (
-    <div className="lg:px-24 md:px-20 px-6 lg:py-12 lg:mt-12 mt-28 industries">
+    <div
+      className="lg:px-24 md:px-20 px-6 lg:py-12 lg:mt-12 mt-28 industries"
+      id="industries"
+    >
       <div className="flex items-center justify-center flex-col text-center">
         <h2 className="lg:text-4xl text-2xl font-semibold text-[#262626]">
           Industries We Serve

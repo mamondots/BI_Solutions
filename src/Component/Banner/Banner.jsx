@@ -2,7 +2,7 @@ import resBannerImg from "../../assets/images/respBanner.png";
 
 const Banner = () => {
   return (
-    <div className="">
+    <div className="" id="banner">
       {/* lg:h-[140vh] h-[100vh] */}
       <div className="w-full lg:px-12 md:px-12 px-8 lg:bg-[url(https://i.ibb.co.com/Y0jP58V/bannerBg.png)] min-h-screen bg-cover bg-no-repeat bg-center bg-[#010821]">
         <div className="relative lg:bg-[url(https://i.ibb.co.com/7S1n82y/banner.png)] lg:min-h-screen bg-cover bg-no-repeat bg-center">

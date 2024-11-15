@@ -3,7 +3,10 @@ import FirstImg from "../../assets/images/contact01.png";
 import FirstImg2 from "../../assets/images/contact02.png";
 const Contact = () => {
   return (
-    <div className="bg-[#fff] mt-[-40px] py-28 lg:px-28 md:px-20 px-6">
+    <div
+      className="bg-[#fff] mt-[-40px] py-28 lg:px-28 md:px-20 px-6"
+      id="contact"
+    >
       <div className="flex items-center justify-center flex-col text-center">
         <h2 className="lg:text-4xl text-xl font-semibold text-[#262626]">
           Ready to Transform Your Data Strategy?

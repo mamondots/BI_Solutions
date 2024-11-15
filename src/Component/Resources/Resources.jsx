@@ -3,7 +3,7 @@ import WithBI from "../../Utilits/withBI";
 
 const Resources = () => {
   return (
-    <div className="lg:px-28 md:px-20 px-6 py-12">
+    <div className="lg:px-28 md:px-20 px-6 py-12" id="resources">
       <div className="flex items-center justify-center flex-col text-center">
         <h2 className="lg:text-4xl text-2xl font-semibold text-[#262626]">
           Insights & Resources
